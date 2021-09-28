@@ -17,7 +17,7 @@ export default function Contact() {
     <div>
       <Navbar />
       <Banner 
-      backgroundImage="url(assets/img/bg-gift2.jpg)"
+      backgroundImage="url(assets/img/bg-gift6.jpg)"
       title="Latest Blog Posts"
       paragraph="Read and get updated on how we progress."
       />

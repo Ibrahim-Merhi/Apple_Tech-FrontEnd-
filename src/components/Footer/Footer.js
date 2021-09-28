@@ -4,13 +4,15 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import './Footer.css'
 const FooterPagePro = () => {
   return (
-    <MDBFooter color="stylish-color-dark" className="page-footer font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
+    <div id="footerbgset">
+    <MDBFooter color="stylish-color-dark" className="page-footer font-small pt-4 mt-4" >
+      <MDBContainer fluid className="text-center text-md-left" >
         <MDBRow>
           <MDBCol md="6">
-            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold" style={{color: "purple"}}>
               APPLE_TECH
             </h5>
             <p>
@@ -19,7 +21,7 @@ const FooterPagePro = () => {
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
-            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+            <h5 className="text-uppercase mb-4 mt-3 "style={{color: "purple"}}>
               Common Problems
             </h5>
             <ul className="list-unstyled">
@@ -39,7 +41,7 @@ const FooterPagePro = () => {
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
-            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+            <h5 className="text-uppercase mb-4 mt-3" style={{color: "purple"}}>
               Recommended Tools
             </h5>
             <ul className="list-unstyled">
@@ -59,7 +61,7 @@ const FooterPagePro = () => {
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
-            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+            <h5 className="text-uppercase mb-4 mt-3 " style={{color: "purple"}}>
               Have an issue
             </h5>
 			<p>Contact us</p>
@@ -87,8 +89,8 @@ const FooterPagePro = () => {
           <li className="list-inline-item">
             <h5 className="mb-1">Register for free</h5>
           </li>
-          <li className="list-inline-item">
-            <a href="#!" className="btn btn-danger btn-rounded">
+          <li className="list-inline-item" >
+            <a href="/signup" className="btn btn-rounded color" style={{backgroundColor: "purple", color: "white"}}>
               Sign up!
             </a>
           </li>
@@ -126,6 +128,7 @@ const FooterPagePro = () => {
         </MDBContainer>
       </div>
     </MDBFooter>
+    </div>
   );
 }
 

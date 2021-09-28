@@ -13,12 +13,14 @@ const Articles = ({ articles, handlePagination, nextUrl, previousUrl }) => {
 			<Navbar/>
 			<Banner
 				backgroundImage="url(assets/img/bg-gift.jpg)"
-				title="Welocme to Apple Tech"
+				title="Welcome to Apple Tech"
 				paragraph="Hope we can help you with your problem."
 			/>
 			<main className="main-content bg-gray">
 				<div className="row">
-					<div className="col-12 col-lg-6 offset-lg-3">
+					<div className="col-12 col-lg-6 offset-lg-3" style={{ marginLeft: "0",
+   								 maxWidth: "100%",
+  								  flex: "unset"}}>
 						{articles &&
 							articles.map((article, i) => (
 								<div key={article.id}>

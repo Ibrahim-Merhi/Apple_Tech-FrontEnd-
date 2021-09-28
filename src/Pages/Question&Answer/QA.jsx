@@ -10,7 +10,7 @@ export default function QuestionAnswer() {
     <div>
       <Navbar />
       <Banner 
-      backgroundImage="url(assets/img/bg-gift2.jpg)"
+      backgroundImage="url(assets/img/bg-gift3.jpg)"
       title="Latest Blog Posts"
       paragraph="Read and get updated on how we progress."
       />

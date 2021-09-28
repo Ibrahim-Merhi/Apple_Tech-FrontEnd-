@@ -196,6 +196,7 @@ button:focus {
 	display: inline;
 	float: left;
 	width: 100%;
+	padding: 0;
 }
 
 .mu-about-area {
@@ -753,7 +754,7 @@ button:focus {
 }
 
 .progress.blue .progress-bar {
-    border-color: #049dff
+    border-color: #049dff;
 }
 
 .progress.blue .progress-left .progress-bar {

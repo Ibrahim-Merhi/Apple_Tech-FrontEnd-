@@ -5,8 +5,8 @@ import Notifications from "./Notifications";
 import UserActions from "./UserActions";
 
 export default () => (
-  <Nav navbar className="border-left flex-row">
+  <Nav style={{ marginLeft: "85%", marginTop: "-1%"}} >
    
-    <UserActions />
+    <UserActions   />
   </Nav>
 );

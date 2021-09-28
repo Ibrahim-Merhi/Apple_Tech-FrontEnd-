@@ -9,31 +9,60 @@ import img2 from './blog-post-2.jpg'
 import img3 from './blog-post-3.jpeg'
 import img4 from './blog-post-4.jpeg'
 import { Link } from "react-router-dom";
+import  { useEffect, useState, useContext } from "react"
+import { useHistory } from 'react-router'
+import API from "../../API"
+import Footer from '../../components/Footer/Footer'
+
 import Blogdetail from '../Blogdetails/Blogdetails'
 import './css/style.css'
 export default function SignInSide() {
+  const [blogs, setBlogs] = useState([]);
 
+  async function fetchData() {
+      try {
+          await API.get('blog')
+              .then(res => {
+                  const data = res.data.result;
+                  const success = res.data.success;
+                  console.log("dd",data)
+                  if (success)
+                  setBlogs(data);
+              });
+      } catch (e) {
+          console.log("ERROR", e);
+      }
+  }
+
+  useEffect(() => {
+      fetchData();
+  }, [])
 
   return (
     <div>
       <Navbar />
       <Banner 
-      backgroundImage="url(assets/img/bg-gift2.jpg)"
+      backgroundImage="url(assets/img/bg-gift7.jpg)"
       title="Latest Blog Posts"
       paragraph="Read and get updated on how we progress."
       />
       <div id="aside"> 
         <div>
-      <main class="posts-listing col-lg-8">
+      <main class="posts-listing col-lg-8" style={{ marginLeft: "0",
+   								 maxWidth: "100%",
+  								  flex: "unset"}}>
         <div class="container">
           <div class="row">
-            <div class="post col-xl-6">
-              <div class="post-thumbnail">
-                <Link to="/blogPage/blogDetail">
+         
+              {blogs.map(blog => (
+                   <div class="post col-xl-6">
+                   <div class="post-thumbnail">
+                     
+                   </div>
+              <div class="post-details">
+                <Link to={`/blogPage/blogDetail/${blog.id}`}>
                   <img src={img1} alt="..." class="img-fluid" />
                 </Link>
-              </div>
-              <div class="post-details">
                 <div class="post-meta d-flex justify-content-between">
                   <div class="date meta-last">20 May | 2016</div>
                   <div class="category">
@@ -41,27 +70,27 @@ export default function SignInSide() {
                   </div>
                 </div>
                 <a href="post.html">
-                  <h3 class="h4">
-                    Alberto Savoia Can Teach You About Interior
+                  <h3 class="h4" style={{textTransform: "uppercase"}}>
+                    {blog.title}
                   </h3>
                 </a>
                 <p class="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore.
+                {blog.description}
                 </p>
                 <footer class="post-footer d-flex align-items-center">
                
                   <div class="date">
-                    <i class="icon-clock"></i> 2 months ago
+                    <i class="icon-clock"></i> {blog.date}
                   </div>
                   <div class="comments meta-last">
                     <i class="icon-comment"></i>12
                   </div>
                 </footer>
               </div>
+              
             </div>
-
-            <div class="post col-xl-6">
+))}
+            {/* <div class="post col-xl-6">
               <div class="post-thumbnail">
                 <a href="post.html">
                   <img src={img2} alt="..." class="img-fluid" />
@@ -93,9 +122,9 @@ export default function SignInSide() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div class="post col-xl-6">
+            {/* <div class="post col-xl-6">
               <div class="post-thumbnail">
                 <a href="post.html" />
                 <img src={img3} alt="..." class="img-fluid" />
@@ -127,9 +156,9 @@ export default function SignInSide() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div class="post col-xl-6">
+            {/* <div class="post col-xl-6">
               <div class="post-thumbnail">
                 <a href="post.html" />
                 <img src={img4} alt="..." class="img-fluid" />
@@ -158,7 +187,7 @@ export default function SignInSide() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           
@@ -208,7 +237,7 @@ export default function SignInSide() {
                 </div>
               </div>
             </a>
-            <a href="#">
+            {/* <a href="#">
               <div class="item d-flex align-items-center">
                 <div class="image">
                   <img
@@ -251,7 +280,7 @@ export default function SignInSide() {
                   </div>
                 </div>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -260,31 +289,35 @@ export default function SignInSide() {
             <h3 class="h6">Categories</h3>
           </header>
           <div class="item d-flex justify-content-between">
-            <a href="#">Growth</a>
-            <span>12</span>
-          </div>
-          <div class="item d-flex justify-content-between">
-            <a href="#">Local</a>
+            <a href="#">News</a>
             <span>25</span>
           </div>
           <div class="item d-flex justify-content-between">
-            <a href="#">Sales</a>
-            <span>8</span>
+            <a href="#">Trickes</a>
+            <span>12</span>
           </div>
           <div class="item d-flex justify-content-between">
             <a href="#">Tips</a>
             <span>17</span>
           </div>
           <div class="item d-flex justify-content-between">
-            <a href="#">Local</a>
+            <a href="#">Hackes</a>
+            <span>8</span>
+          </div>
+          <div class="item d-flex justify-content-between">
+            <a href="#">Common Problem</a>
             <span>25</span>
           </div>
+          
+          
+         
         </div>
 
         
       </aside>
       </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -8427,12 +8427,11 @@ a.text-danger:focus {
 }
 
 .pl-4 {
-  padding-left: 4px !important;
+  margin-left: 18%;
 }
 
 .px-4 {
-  padding-right: 4px !important;
-  padding-left: 4px !important;
+  margin-left: 18%;
 }
 
 .py-4 {

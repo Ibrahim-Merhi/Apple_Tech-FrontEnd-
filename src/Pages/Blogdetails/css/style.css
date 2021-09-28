@@ -1,39 +1,45 @@
-.thesaas-sections-split .section,
-.thesaas-sections-split .main-content .topbar,
-.thesaas-sections-split .main-content .site-footer {
-  margin: 30px 50px 100px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ebebeb;
+#bannerbg{
+  background-image: url('../blog-post-1.jpeg');
+ 
+}
+#designbtn {
+
+  color: purple;
+}
+/* #designbtn:hover{
+  transform: scale(1.05);
+  
+} */
+
+#firstone {
+  transition: transform .3s; /* Animation */
+  margin-bottom: 1%;
+  color: purple;
+  font-weight: bolder;
+
+}
+#firstone:hover{
+  transform: scale(1.05);
+  
 }
 
-.thesaas-sections-split .main-content .topbar {
-  position: static;
+#secondone {
+  transition: transform .3s; /* Animation */
+  margin-bottom: 1%;
+  color: purple;
+  font-weight: bold;
 }
+#secondone:hover{
+  transform: scale(1.05);
 
-.thesaas-sections-split .main-content .topbar .topbar-toggler {
-  display: none;
+  
 }
-
-.thesaas-sections-split .section-info {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding-top: 60px;
+#thirdone {
+  transition: transform .3s; /* Animation */
+  margin-bottom: 1%;
+  color: purple;
 }
-
-.thesaas-sections-split.topbar-reveal .main-content .topbar-nav {
-  display: none;
-}
-.aside{
-  display: flex;
- }
-
-@media (max-width: 768px) {
-  .thesaas-sections-split .section,
-  .thesaas-sections-split .main-content .site-footer {
-    margin: 30px 0 100px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
+#thirdone:hover{
+  transform: scale(1.05);
+  
 }

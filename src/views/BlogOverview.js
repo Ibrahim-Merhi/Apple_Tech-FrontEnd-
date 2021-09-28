@@ -23,11 +23,13 @@ const BlogOverview = ({ smallStats }) => (
 
    
 < Layout />
-  <Container fluid className="main-content-container px-4">
+  <Container fluid className="main-content-container" style={{
+    marginLeft: "17%", maxWidth: "fit-content"
+  }}>
     {/* Page Header */}
    
 
-    <Row noGutters className="page-header py-4">
+    <Row noGutters className="page-header py-4" >
       <PageTitle title="Blog Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
     </Row>
 
@@ -62,7 +64,7 @@ const BlogOverview = ({ smallStats }) => (
       </Col>
 
       {/* New Draft */}
-      <Col lg="4" md="6" sm="12" className="mb-4">
+      <Col lg="6" md="8" sm="12" className="mb-4">
         <NewDraft />
       </Col>
 
@@ -71,13 +73,11 @@ const BlogOverview = ({ smallStats }) => (
         <Discussions />
       </Col>
 
-      {/* Top Referrals */}
-      <Col lg="3" md="12" sm="12" className="mb-4">
-        <TopReferrals />
-      </Col>
+     
     </Row>
     
   </Container>
+  <MainFooter />
   </div>
 );
 

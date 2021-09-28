@@ -1,4 +1,5 @@
 import React from "react";
+
 import PropTypes from "prop-types";
 import {
   Card,
@@ -10,7 +11,6 @@ import {
   Row,
   Col
 } from "shards-react";
-
 const Discussions = ({ title, discussions }) => (
   <Card small className="blog-comments">
     <CardHeader className="border-bottom">
@@ -22,7 +22,7 @@ const Discussions = ({ title, discussions }) => (
         <div key={idx} className="blog-comments__item d-flex p-3">
           {/* Avatar */}
           <div className="blog-comments__avatar mr-3">
-            <img src={discussion.author.image} alt={discussion.author.name} />
+            {/* <img src={discussion.author.image} alt={discussion.author.name} /> */}
           </div>
 
           {/* Content */}
@@ -44,25 +44,21 @@ const Discussions = ({ title, discussions }) => (
 
             {/* Content :: Actions */}
             <div className="blog-comments__actions">
-              <ButtonGroup size="sm">
-                <Button theme="white">
-                  <span className="text-success">
-                    <i className="material-icons">check</i>
-                  </span>{" "}
-                  Approve
+              <ButtonGroup size="sm" >
+                <Button theme="white" style={{border: "0px"}} >
+                  
+                    {/* <i className="material-icons">check</i> */}
+                    <box-icon name='check' animation='tada' color='#22b904' ></box-icon>
+                  
+                  
                 </Button>
-                <Button theme="white">
-                  <span className="text-danger">
-                    <i className="material-icons">clear</i>
-                  </span>{" "}
-                  Reject
+                <Button theme="white" style={{border: "0px"}}>
+                 
+                    {/* <i className="material-icons">clear</i> */}
+                    <box-icon name='x' animation='flashing' color='#c9050a' ></box-icon>
+                 
                 </Button>
-                <Button theme="white">
-                  <span className="text-light">
-                    <i className="material-icons">more_vert</i>
-                  </span>{" "}
-                  Edit
-                </Button>
+               
               </ButtonGroup>
             </div>
           </div>

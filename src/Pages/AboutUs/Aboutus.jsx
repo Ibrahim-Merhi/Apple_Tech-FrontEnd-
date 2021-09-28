@@ -6,17 +6,18 @@ import { Link } from "react-router-dom";
  import './style.css'
  import img1 from './assets/images/about-us.jpg'
 import img2 from './assets/images/team-member.jpg'
+import Footer from '../../components/Footer/Footer'
 export default function Contact() {
   return (
     <div>
       <Navbar />
       <Banner
-        backgroundImage="url(assets/img/bg-gift2.jpg)"
+        backgroundImage="url(assets/img/bg-gift5.jpg)"
         title="Latest Blog Posts"
         paragraph="Read and get updated on how we progress."
       />
 
-      <div id="mu-page-header">
+      {/* <div id="mu-page-header">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -26,7 +27,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <main>
         <section id="mu-about">
@@ -125,11 +126,11 @@ export default function Contact() {
                           <div class="col-md-3">
                             <div class="mu-single-skills">
                               <div
-                                class="row d-flex justify-content-center mt-100"
+                                class="row d-flex justify-content-center mt-50"
                                 id="bars"
                               >
                                 <div class="col-md-6">
-                                  <div class="progress blue">
+                                  <div class="progress blue" style={{background: "Transparent", boxShadow: "none"}}>
                                     {" "}
                                     <span class="progress-left">
                                       {" "}
@@ -153,9 +154,9 @@ export default function Contact() {
 
                           <div class="col-md-3">
                             <div class="mu-single-skills">
-                              <div class="row d-flex justify-content-center mt-100">
+                              <div class="row d-flex justify-content-center mt-50">
                                 <div class="col-md-6">
-                                  <div class="progress blue">
+                                  <div class="progress blue" style={{background: "Transparent", boxShadow: "none"}}>
                                     {" "}
                                     <span class="progress-left">
                                       {" "}
@@ -179,9 +180,9 @@ export default function Contact() {
 
                           <div class="col-md-3">
                             <div class="mu-single-skills">
-                              <div class="row d-flex justify-content-center mt-100">
+                              <div class="row d-flex justify-content-center mt-50">
                                 <div class="col-md-6">
-                                  <div class="progress blue">
+                                  <div class="progress blue" style={{background: "Transparent", boxShadow: "none"}}>
                                     {" "}
                                     <span class="progress-left">
                                       {" "}
@@ -205,9 +206,9 @@ export default function Contact() {
 
                           <div class="col-md-3">
                             <div class="mu-single-skills">
-                              <div class="row d-flex justify-content-center mt-100">
+                              <div class="row d-flex justify-content-center mt-50">
                                 <div class="col-md-6">
-                                  <div class="progress blue">
+                                  <div class="progress blue" style={{background: "Transparent", boxShadow: "none"}}>
                                     {" "}
                                     <span class="progress-left">
                                       {" "}
@@ -238,7 +239,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <section id="mu-team">
+        <section id="mu-team" style={{backgroundColor:"white"}}>
           <div class="container">
             <div class="row">
               <div class="col-md-12">
@@ -437,6 +438,7 @@ export default function Contact() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

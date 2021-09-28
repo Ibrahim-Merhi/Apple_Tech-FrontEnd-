@@ -23,6 +23,9 @@ import BlogOverview from "../../views/BlogOverview";
 import UserProfileLite from "../../views/UserProfileLite";
 import AddNewPost from "../../views/AddNewPost";
 import BlogPosts from "../../views/BlogPosts";
+import QAList from '../../Pages/Q&A List/Q&A List'
+import NewQuestion from "../../Pages/NewBlog/NewQuestion";
+import 'boxicons';
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "../../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 class App extends Component {
@@ -102,7 +105,7 @@ class App extends Component {
 			/>
 			<Route
 				exact
-				path="/blogPage/blogDetail"
+				path="/blogPage/blogDetail/:id"
 				component={Blogdetail}
 				
 			/>
@@ -120,8 +123,20 @@ class App extends Component {
 			/>
 			<Route
 				exact
-				path="/QA"
+				path="/QA/QApost"
+				component={NewQuestion}
+				
+			/>
+				<Route
+				exact
+				path="/QA/QAview"
 				component={QuestionAnswer}
+				
+			/>
+			<Route
+				exact
+				path="/QA"
+				component={QAList}
 				
 			/>
 			<Route

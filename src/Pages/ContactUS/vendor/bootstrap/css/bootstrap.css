@@ -6720,8 +6720,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .px-4 {
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
+  margin-left: 18%;
 }
 
 .py-4 {

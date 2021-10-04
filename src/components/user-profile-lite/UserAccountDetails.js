@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useState } from 'react';
 import {
   Card,
   CardHeader,
@@ -14,11 +15,15 @@ import {
   FormTextarea,
   Button
 } from "shards-react";
+import DatePicker from 'react-date-picker';
+export default function UserAccountDetails() {
+  const [valuess, onChanges] = useState(new Date());
 
-const UserAccountDetails = ({ title }) => (
+return (
+
   <Card small className="mb-4">
     <CardHeader className="border-bottom">
-      <h6 className="m-0">{title}</h6>
+      <h6 className="m-0">Personal Information</h6>
     </CardHeader>
     <ListGroup flush>
       <ListGroupItem className="p-3">
@@ -32,7 +37,7 @@ const UserAccountDetails = ({ title }) => (
                   <FormInput
                     id="feFirstName"
                     placeholder="First Name"
-                    value="Sierra"
+                    
                     onChange={() => {}}
                   />
                 </Col>
@@ -42,9 +47,31 @@ const UserAccountDetails = ({ title }) => (
                   <FormInput
                     id="feLastName"
                     placeholder="Last Name"
-                    value="Brooks"
+                    
                     onChange={() => {}}
                   />
+                </Col>
+              </Row>
+              <Row form>
+                {/* Username */}
+                <Col md="6" className="form-group">
+                  <label htmlFor="feLastName">UserName</label>
+                  <FormInput
+                    id="feLastName"
+                    placeholder="UserName"
+                    
+                    onChange={() => {}}
+                  />
+                </Col>
+                {/* Phone Number */}
+                <Col md="6" className="form-group">
+                <label htmlFor="fePhone Number">Phone Number</label>
+                  <FormInput
+                  id="fePhone Number"
+                  placeholder="Phone Number"
+                 
+                  onChange={() => {}}
+                />
                 </Col>
               </Row>
               <Row form>
@@ -55,9 +82,9 @@ const UserAccountDetails = ({ title }) => (
                     type="email"
                     id="feEmail"
                     placeholder="Email Address"
-                    value="sierra@example.com"
+                   
                     onChange={() => {}}
-                    autoComplete="email"
+                    
                   />
                 </Col>
                 {/* Password */}
@@ -67,49 +94,21 @@ const UserAccountDetails = ({ title }) => (
                     type="password"
                     id="fePassword"
                     placeholder="Password"
-                    value="EX@MPL#P@$$w0RD"
+                    
                     onChange={() => {}}
-                    autoComplete="current-password"
+                    
                   />
                 </Col>
               </Row>
-              <FormGroup>
-                <label htmlFor="feAddress">Address</label>
-                <FormInput
-                  id="feAddress"
-                  placeholder="Address"
-                  value="1234 Main St."
-                  onChange={() => {}}
-                />
-              </FormGroup>
-              <Row form>
-                {/* City */}
-                <Col md="6" className="form-group">
-                  <label htmlFor="feCity">City</label>
-                  <FormInput
-                    id="feCity"
-                    placeholder="City"
-                    onChange={() => {}}
-                  />
+               {/* Birthdate */}
+               <Col md="6" className="form-group">
+                  <label htmlFor="feFirstName" style={{marginRight: "10%"}}>Birthdate</label>
+                  <DatePicker
+                  
+                   onChange={onChanges}
+                   value={valuess}
+                    />
                 </Col>
-                {/* State */}
-                <Col md="4" className="form-group">
-                  <label htmlFor="feInputState">State</label>
-                  <FormSelect id="feInputState">
-                    <option>Choose...</option>
-                    <option>...</option>
-                  </FormSelect>
-                </Col>
-                {/* Zip Code */}
-                <Col md="2" className="form-group">
-                  <label htmlFor="feZipCode">Zip</label>
-                  <FormInput
-                    id="feZipCode"
-                    placeholder="Zip"
-                    onChange={() => {}}
-                  />
-                </Col>
-              </Row>
               <Row form>
                 {/* Description */}
                 <Col md="12" className="form-group">
@@ -117,7 +116,7 @@ const UserAccountDetails = ({ title }) => (
                   <FormTextarea id="feDescription" rows="5" />
                 </Col>
               </Row>
-              <Button theme="accent">Update Account</Button>
+              <button theme="accent">Create Account</button>
             </Form>
           </Col>
         </Row>
@@ -125,6 +124,7 @@ const UserAccountDetails = ({ title }) => (
     </ListGroup>
   </Card>
 );
+}
 
 UserAccountDetails.propTypes = {
   /**
@@ -137,4 +137,4 @@ UserAccountDetails.defaultProps = {
   title: "Account Details"
 };
 
-export default UserAccountDetails;
+

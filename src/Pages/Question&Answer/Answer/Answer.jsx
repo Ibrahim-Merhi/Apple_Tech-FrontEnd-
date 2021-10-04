@@ -1,5 +1,8 @@
 import React from "react";
 import './Answer.css'
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
 export default function Answer() {
 
 
@@ -39,30 +42,33 @@ export default function Answer() {
     	<div class="row">
             <div class="col-sm-8">   
                 <form>
-                	<h3 class="pull-left">New Comment</h3>
-                	<button type="submit" class="btn btn-normal pull-right">Submit</button>
+                	<h3 class="pull-left">New Answer</h3>
+                	
                     <fieldset>
                         <div class="row">
-                            <div class="col-sm-3 col-lg-2 hidden-xs">
-                            	<img class="img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""/>
+                            <div >
+                            	
                             </div>
-                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+                            <div class="form-group col-xs-12 col-sm-9 col-lg-12">
                                 <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
                             </div>
-                        </div>  	
+                        </div>  
+                        <button type="submit" class=" pull-right">Submit</button>	
                     </fieldset>
                 </form>
                 
-                <h3>4 Comments</h3>
+                <h3>3 Answers</h3>
                 
                 
                 <div class="media">
-                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""/></a>
+                    <a class="pull-left" href="#"><Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width: 32, height: 32, }}>B</Avatar>
+                                </Stack></a>
                     <div class="media-body">
-                        <h4 class="media-heading">John Doe</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 class="media-heading">Baraa Haydar</h4>
+                        <p>Open XCode -> Organizer -> Devices -> Provision Profiles (Under Library) -> Press refresh button. This will ask for the apple Id so put in your credentials there and it should do the trick.</p>
                         <ul class="list-unstyled list-inline media-detail pull-left">
-                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                            <i class="fa fa-calendar" ></i>&nbsp; 2021 /09 /27
                           
                         </ul>
                       
@@ -70,43 +76,35 @@ export default function Answer() {
                 </div>
              
                 <div class="media">
-                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""/></a>
+                    <a class="pull-left" href="#"><Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width: 32, height: 32, }}>M</Avatar>
+                                </Stack></a>
                     <div class="media-body">
-                        <h4 class="media-heading">John Doe</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 class="media-heading">Mostafa Kassem</h4>
+                        <p>Open Your mac, in the seetings you can modified it in the manage account page.</p>
                         <ul class="list-unstyled list-inline media-detail pull-left">
-                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                            <i class="fa fa-calendar" ></i>&nbsp; 2021 /09 /28
                           
                         </ul>
                       
                     </div>
                 </div>
-               
+
                 <div class="media">
-                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""/></a>
+                    <a class="pull-left" href="#"><Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width: 32, height: 32, }}>A</Avatar>
+                                </Stack></a>
                     <div class="media-body">
-                        <h4 class="media-heading">John Doe</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4 class="media-heading">Ahmad Hamdach</h4>
+                        <p>I have faced that error before, check this link : "https://stackoverflow.com/questions/19698645"</p>
                         <ul class="list-unstyled list-inline media-detail pull-left">
-                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                            <i class="fa fa-calendar" ></i>&nbsp; 2021 /09 /28
                           
                         </ul>
                       
                     </div>
                 </div>
-                
-                <div class="media">
-                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""/></a>
-                    <div class="media-body">
-                        <h4 class="media-heading">John Doe</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul class="list-unstyled list-inline media-detail pull-left">
-                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
-                          
-                        </ul>
-                      
-                    </div>
-                </div>
+             
                 
             </div>
         </div>

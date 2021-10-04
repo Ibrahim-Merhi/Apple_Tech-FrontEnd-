@@ -4,23 +4,27 @@ import { NavLink as RouteNavLink } from "react-router-dom";
 import { NavItem, NavLink } from "shards-react";
 
 const SidebarNavItem = ({ item }) => (
+  <div >
   <NavItem>
     <NavLink tag={RouteNavLink} to={item.to}>
       {item.htmlBefore && (
         <div
-          className="d-inline-block item-icon-wrapper"
+          className="block item-icon-wrapper"
           dangerouslySetInnerHTML={{ __html: item.htmlBefore }}
+          style={{}}
         />
       )}
-      {item.title && <span>{item.title}</span>}
+      {item.title && <span style={{color: "purple", fontSize: "16px" }}>{item.title}</span>}
       {item.htmlAfter && (
         <div
           className="d-inline-block item-icon-wrapper"
           dangerouslySetInnerHTML={{ __html: item.htmlAfter }}
+          style={{boxShadow: "purple", borderColor: "purple"}}
         />
       )}
     </NavLink>
   </NavItem>
+  </div>
 );
 
 SidebarNavItem.propTypes = {

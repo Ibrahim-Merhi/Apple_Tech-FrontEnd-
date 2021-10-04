@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Navbar, NavbarBrand } from "shards-react";
-import img1 from '../../../images/Logo/logo3.png'
+import img1 from '../../../images/Logo/logo4.png'
 import { Dispatcher, Constants } from "../../../flux";
 
 class SidebarMainNavbar extends React.Component {
@@ -27,7 +27,7 @@ class SidebarMainNavbar extends React.Component {
         >
           <NavbarBrand
             className="w-100 mr-0"
-            href="#"
+            href="/"
             style={{ lineHeight: "25px" }}
           >
             <div className="d-table m-auto">
@@ -48,6 +48,7 @@ class SidebarMainNavbar extends React.Component {
           <a
             className="toggle-sidebar d-sm-inline d-md-none d-lg-none"
             onClick={this.handleToggleSidebar}
+            
           >
             {/* <i className="material-icons">&#xE5C4;</i> */}
           </a>

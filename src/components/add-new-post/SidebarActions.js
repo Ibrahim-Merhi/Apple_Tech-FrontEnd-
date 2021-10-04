@@ -21,14 +21,14 @@ const SidebarActions = ({ title }) => (
       <ListGroup flush>
         <ListGroupItem className="p-3">
           <span className="d-flex mb-2">
-            <i className="material-icons mr-1">flag</i>
+          <box-icon type='solid' name='flag-alt' color='#495057' size="xs" style={{marginRight: "3%"}}></box-icon>
             <strong className="mr-1">Status:</strong> Draft{" "}
             <a className="ml-auto" href="#">
               Edit
             </a>
           </span>
           <span className="d-flex mb-2">
-            <i className="material-icons mr-1">visibility</i>
+          <box-icon name='show' color='#495057' size="xs" style={{marginRight: "3%"}} ></box-icon>
             <strong className="mr-1">Visibility:</strong>{" "}
             <strong className="text-success">Public</strong>{" "}
             <a className="ml-auto" href="#">
@@ -36,25 +36,21 @@ const SidebarActions = ({ title }) => (
             </a>
           </span>
           <span className="d-flex mb-2">
-            <i className="material-icons mr-1">calendar_today</i>
+          <box-icon name='calendar-alt' color='#495057' size="xs" style={{marginRight: "3%"}} ></box-icon>
             <strong className="mr-1">Schedule:</strong> Now{" "}
             <a className="ml-auto" href="#">
               Edit
             </a>
           </span>
-          <span className="d-flex">
-            <i className="material-icons mr-1">score</i>
-            <strong className="mr-1">Readability:</strong>{" "}
-            <strong className="text-warning">Ok</strong>
-          </span>
+         
         </ListGroupItem>
         <ListGroupItem className="d-flex px-3 border-0">
-          <Button outline theme="accent" size="sm">
-            <i className="material-icons">save</i> Save Draft
-          </Button>
-          <Button theme="accent" size="sm" className="ml-auto">
-            <i className="material-icons">file_copy</i> Publish
-          </Button>
+          <button >
+           Save Draft
+          </button>
+          <button className="ml-2">
+            Publish
+          </button>
         </ListGroupItem>
       </ListGroup>
     </CardBody>

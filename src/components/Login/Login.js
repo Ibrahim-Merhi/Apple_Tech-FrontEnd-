@@ -131,12 +131,12 @@ import Navbar2 from '../Navbar/Navbar2'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {'© 2021 Copyright  '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      IBRAHIM MERHI
       </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+     
+      
     </Typography>
   );
 }
@@ -186,7 +186,7 @@ export default function SignInSide() {
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
+          <Avatar className={classes.avatar}  style={{backgroundColor : "purple"}}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -222,20 +222,20 @@ export default function SignInSide() {
             <Button
               type="submit"
               fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
+              
+              
+              
             >
-              Sign In
+              SIGN IN
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" style={{color: "purple"}}>
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/signup" variant="body2">
+                <Link href="/signup" variant="body2"  style={{color: "purple"}}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

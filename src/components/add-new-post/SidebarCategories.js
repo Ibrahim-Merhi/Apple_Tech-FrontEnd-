@@ -20,22 +20,24 @@ const SidebarCategories = ({ title }) => (
     </CardHeader>
     <CardBody className="p-0">
       <ListGroup flush>
-        <ListGroupItem className="px-3 pb-2">
-          <FormCheckbox className="mb-1" value="uncategorized" defaultChecked>
-            Uncategorized
+        <ListGroupItem className="px-3 pb-2" >
+        <FormCheckbox className="mb-1" value="design">
+            Trickes
           </FormCheckbox>
-          <FormCheckbox className="mb-1" value="design" defaultChecked>
-            Design
+        <FormCheckbox className="mb-1" value="books">
+            News
           </FormCheckbox>
-          <FormCheckbox className="mb-1" value="development">
-            Development
+          
+          <FormCheckbox className="mb-1" value="development" >
+            Tips
           </FormCheckbox>
           <FormCheckbox className="mb-1" value="writing">
-            Writing
+            Hackes
           </FormCheckbox>
-          <FormCheckbox className="mb-1" value="books">
-            Books
+          <FormCheckbox className="mb-1" value="writing">
+            Common Problem
           </FormCheckbox>
+          
         </ListGroupItem>
 
         <ListGroupItem className="d-flex px-3">

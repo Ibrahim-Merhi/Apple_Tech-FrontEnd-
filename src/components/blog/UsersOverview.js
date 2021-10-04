@@ -96,12 +96,12 @@ class UsersOverview extends React.Component {
           <Row className="border-bottom py-2 bg-light">
            
             <Col>
-              <Button
+              <button
                 size="sm"
-                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0" style={{backgroundColor: "purple" , color: "white"}}
+                className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
               >
                 View Full Report &rarr;
-              </Button>
+              </button>
             </Col>
           </Row>
           <canvas
@@ -170,10 +170,10 @@ UsersOverview.defaultProps = {
           3100,
           4250
         ],
-        backgroundColor: "rgba(0,123,255,0.1)",
-        borderColor: "rgba(0,123,255,1)",
+        backgroundColor: "rgba(128,0,128,0.1)",
+        borderColor: "rgba(128,0,128,1)",
         pointBackgroundColor: "#ffffff",
-        pointHoverBackgroundColor: "rgb(0,123,255)",
+        pointHoverBackgroundColor: "rgb(128,0,128)",
         borderWidth: 1.5,
         pointRadius: 0,
         pointHoverRadius: 3
@@ -213,15 +213,15 @@ UsersOverview.defaultProps = {
           780,
           1200
         ],
-        backgroundColor: "rgba(255,65,105,0.1)",
-        borderColor: "rgba(255,65,105,1)",
+        backgroundColor: "rgba(218,112,214,0.1)",
+        borderColor: "rgba(218,112,214,1)",
         pointBackgroundColor: "#ffffff",
-        pointHoverBackgroundColor: "rgba(255,65,105,1)",
+        pointHoverBackgroundColor: "rgba(218,112,214,1)",
         borderDash: [3, 3],
         borderWidth: 1,
         pointRadius: 0,
         pointHoverRadius: 2,
-        pointBorderColor: "rgba(255,65,105,1)"
+        pointBorderColor: "rgba(218,112,214,1)"
       }
     ]
   }

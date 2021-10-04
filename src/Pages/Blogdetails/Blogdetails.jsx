@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import  { useEffect, useState, useContext } from "react"
 import { useHistory } from 'react-router-dom'
 import API from "../../API"
+import SimpleDateTime  from 'react-simple-timestamp-to-date';
 export default function blogdetail(props) {
   const [blogs, setBlogs] = useState([]);
 let id= props.match.params.id
@@ -59,6 +60,10 @@ let id= props.match.params.id
     useEffect(() => {
        fetchBlog();
         fetchComment();
+        window.scroll({
+          top: 0,
+          left: 0,
+        });
     }, [])
     const history = useHistory();
 
@@ -82,19 +87,19 @@ let id= props.match.params.id
           <div class="container">
          
             <div class="post-single">
-            <button id="designbtn" style={{textTransform: "uppercase"}} onClick={() => history.goBack()}><b><a href="/" id="firstone" style={{color: "inherit", fontWeight: "bolder"}}>Apple_tech</a></b> / <a href="/blogPage" id="secondone"> BLOGS</a> / <a href="" id="thirdone">{blogs.title}</a> </button>
-              <div class="post-thumbnail"><img src={img3} alt="..." class="img-fluid"/></div>
+            <button id="designbtn" style={{textTransform: "uppercase" , borderRadius: "12px" , marginBottom: "2%"}} onClick={() => history.goBack()}><a href="/" id="firstone" style={{color: "inherit", fontWeight: "bolder"}}>Apple_tech</a> / <a href="/blogPage" id="secondone" style={{color: "inherit", fontWeight: "bolder"}}> BLOGS</a> / <a href="" id="thirdone" style={{color: "inherit", fontWeight: "bolder"}}>{blogs.title}</a> </button>
+              <div class="post-thumbnail"><img src={blogs.image} alt="..." class="img-fluid"/></div>
               
               <div class="post-details">
                 <div class="post-meta d-flex justify-content-between">
-                  <div class="category"><a >Business</a></div>
+                  <div class="category"><a style={{color: "purple"}}>{blogs.categories}</a></div>
                 </div>
-                <h1>{blogs.title}</h1>
+                <h1 style={{textTransform: "uppercase"}}>{blogs.title}</h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row">
                   <div class="d-flex align-items-center flex-wrap">       
-                    <div class="date"><i class="icon-clock"></i>{blogs.date}</div>
+                    <div class="date"><i class="icon-clock"></i><SimpleDateTime dateSeparator="-" format="YMD" showTime="0">{blogs.date}</SimpleDateTime></div>
                     <div class="views"><i class="icon-eye"></i>{blogs.view}</div>
-                    <div class="comments meta-last"><i class="icon-comment"></i></div>
+                    <div class="comments meta-last"><i class="icon-comment"></i>{totaclComments}</div>
                   </div>
                 </div>
                 <div class="post-body" style={{marginBottom: "25%"}}>
@@ -164,7 +169,7 @@ let id= props.match.params.id
                         <textarea name="usercomment" id="usercomment" placeholder="Type your comment" class="form-control"></textarea>
                       </div>
                       <div class="form-group col-md-12">
-                        <button type="submit" class="btn btn-secondary">Submit Comment</button>
+                        <button type="submit">Submit Comment</button>
                       </div>
                     </div>
                   </form>

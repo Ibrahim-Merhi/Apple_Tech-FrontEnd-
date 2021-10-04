@@ -37,7 +37,7 @@ export default function NewQuestion() {
         <Editor />
         </Col>
         <div class="form-group">
-                <button class="btn" style={{backgroundColor: "purple" , color: "white"}} id="submit" onClick={() => post()}>Submit Question</button>
+                <button  id="submit" onClick={() => post()}>Submit Question</button>
                 <button class="btn btn-secindary" id="submit" onClick={() => history.goBack()}>Cancel</button>
             </div>
     </div>

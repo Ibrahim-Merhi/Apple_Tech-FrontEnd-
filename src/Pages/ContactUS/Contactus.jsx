@@ -18,8 +18,8 @@ export default function Contact() {
       <Navbar />
       <Banner 
       backgroundImage="url(assets/img/bg-gift6.jpg)"
-      title="Latest Blog Posts"
-      paragraph="Read and get updated on how we progress."
+      title="Contact US"
+      paragraph="Feel Free to contact us and give us your feedback"
       />
      
      <div class="container-contact100">
@@ -97,7 +97,7 @@ export default function Contact() {
           </div>
 
           <div class="container-contact100-form-btn">
-            <button class="contact100-form-btn">Send Message</button>
+            <button>Send Message</button>
           </div>
         </form>
 
@@ -113,7 +113,7 @@ export default function Contact() {
             <div class="flex-col size2">
               <span class="txt1 p-b-20"> Address </span>
 
-              <span class="txt2">
+              <span class="txt2" >
                 Marwa Center 1st floor, 26 St, Nakhle, Koura-Lb
               </span>
             </div>
@@ -127,7 +127,7 @@ export default function Contact() {
             <div class="flex-col size2">
               <span class="txt1 p-b-20"> Lets Talk </span>
 
-              <span class="txt3"> +961 71 562 851 </span>
+              <span class="txt3" style={{color: "purple"}}> +961 71 562 851 </span>
             </div>
           </div>
 
@@ -139,7 +139,7 @@ export default function Contact() {
             <div class="flex-col size2">
               <span class="txt1 p-b-20"> General Support </span>
 
-              <span class="txt3"> AppleTec@Techinfo.com </span>
+              <span class="txt3" style={{color: "purple"}}> AppleTec@Techinfo.com </span>
             </div>
           </div>
         </div>

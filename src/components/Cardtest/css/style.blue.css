@@ -596,11 +596,11 @@ div[class*="-btn"] {
 }
 
 .navbar .navbar-nav a.nav-link:hover {
-  color: #2b90d9;
+  color: purple;
 }
 
 .navbar .navbar-nav a.nav-link.active {
-  color: #2b90d9;
+  color: purple;
   font-weight: bold;
 }
 

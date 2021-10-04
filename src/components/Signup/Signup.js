@@ -336,7 +336,7 @@ export default function SignInSide() {
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
+          <Avatar className={classes.avatar}  style={{backgroundColor : "purple"}}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -400,15 +400,12 @@ export default function SignInSide() {
           <Button
             type="submit"
             fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
           >
             Sign Up
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="/login" variant="body2">
+              <Link href="/login" variant="body2" style={{color: "purple"}}>
                 Already have an account? Sign in
               </Link>
             </Grid>

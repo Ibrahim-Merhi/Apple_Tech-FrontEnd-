@@ -37,3 +37,103 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 }
+#zoom {
+    
+  transition: transform .4s; /* Animation */
+  
+}
+
+#zoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+#hover-underline-animation:hover {
+  display: inline-block;
+  position: relative;
+  color: purple;
+}
+
+#hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: purple;
+  transform-origin: bottom ;
+  transition: transform 0.45s ease-out;
+}
+
+#hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom ;
+}
+
+.pagination-outer{ text-align: center; background-color: transparent;}
+.pagination{
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-flex;
+    position: relative;
+    background-color: transparent;
+}
+.pagination li a.page-link{
+    color: #fff;
+    background-color: purple;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 38px;
+    height: 38px;
+    width: 38px;
+    padding: 0;
+    margin: 0 6px 6px;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus,
+.pagination li.active a.page-link:hover,
+.pagination li.active a.page-link{
+    color: #fff;
+    background: purple;
+    transform: rotate(360deg);
+    
+}
+.pagination li a.page-link:before{
+    content: '';
+    background: rgb(218, 78, 218);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(221, 138, 221);
+    opacity: 0.5;
+    transform: scale(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+    
+}
+.pagination li a.page-link:hover:before,
+.pagination li a.page-link:focus:before,
+.pagination li.active a.page-link:hover:before,
+.pagination li.active a.page-link:before{
+    transform: scale(1.25);
+}
+@media only screen and (max-width: 480px){
+    .pagination{
+        font-size: 0;
+        display: inline-block;
+    }
+    .pagination li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 10px;
+    }
+}

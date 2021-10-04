@@ -26,17 +26,17 @@ const FooterPagePro = () => {
             </h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Problem 1</a>
+                <a href="#!">Stuck in Recovery Mode</a>
               </li>
               <li>
-                <a href="#!">Problem 2</a>
-              </li>
-              <li>
-                <a href="#!">Problem 3</a>
-              </li>
-              <li>
-                <a href="#!">Problem 4</a>
-              </li>
+                <a href="#!">Battery Drain</a>
+                </li>
+                <li>
+                <a href="#!">Wifi Connection</a>
+                </li>
+                <li>
+                <a href="#!">Camera Black Screen</a>
+                </li>
             </ul>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
@@ -45,26 +45,28 @@ const FooterPagePro = () => {
               Recommended Tools
             </h5>
             <ul className="list-unstyled">
-              <li>
-                <a href="#!">Tool 1</a>
+            <li>
+                <a href="#!">Itunes</a>
               </li>
               <li>
-                <a href="#!">Tool 2</a>
+                <a href="#!">3Utools</a>
               </li>
               <li>
-                <a href="#!">Tool 3</a>
+                <a href="#!">Altstore</a>
               </li>
+              
               <li>
-                <a href="#!">Tool 4</a>
+                <a href="#!">Checkr1n</a>
               </li>
+             
             </ul>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
             <h5 className="text-uppercase mb-4 mt-3 " style={{color: "purple"}}>
-              Have an issue
+              Have an issue Contact us
             </h5>
-			<p>Contact us</p>
+			
             <ul className="list-unstyled">
 			<li>
                 <a href="#!">Email</a>
@@ -73,10 +75,10 @@ const FooterPagePro = () => {
                 <a href="#!">Whatsapp</a>
               </li>
               <li>
-                <a href="#!">Instagram</a>
+                <a href="#!">Telegram</a>
               </li>
               <li>
-                <a href="#!">Facebook</a>
+                <a href="#!">Discrod</a>
               </li>
               
             </ul>

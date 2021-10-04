@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import image1 from './img/blogpost2.jpg'
 import image2 from './img/blogpost5.jpg'
-import image3 from './img/blogpost8.jpg'
+import image3 from './img/blogpost10.jpg'
 import backgrounddev from './img/dev.jpg'
 export default function BlogCardDemo() {
     
@@ -46,9 +46,9 @@ export default function BlogCardDemo() {
                             <div class="content">
                                 <header class="post-header">
                                     <div class="category"><a >Death</a><a >Sad Moment</a></div><a href="https://www.apple.com/newsroom/2011/10/05Apple-Media-Advisory/">
-                                        <h2 class="h3" style={{color: "Purple"}}>Steve Passed away <b>EARLIER</b> </h2></a>
+                                        <h2 class="h3" style={{color: "Purple"}}>Steve Passed Away <b>EARLIER</b> </h2></a>
                                 </header>
-                                <h5>Tim Cook</h5><p>Apple has lost a visionary and creative genius, and the world has lost an amazing human being. Those of us who have been fortunate enough to know and work with Steve have lost a dear friend and an inspiring mentor. Steve leaves behind a company that only he could have built, and his spirit will forever be the foundation of Apple. <br/><br/>If you would like to share your thoughts, memories and condolences in the interim, you can simply email &nbsp; <a href='mailto:rememberingsteve@apple.com' style={{color: "Purple"}}> rememberingsteve@apple.com</a><br/><br/></p>
+                                <h5>Tim Cook</h5><p>Apple has lost a visionary and creative genius, and the world has lost an amazing human being. Those of us who have been fortunate enough to know and work with Steve have lost a dear friend and an inspiring mentor.<br/><br/>If you would like to share your thoughts, memories and condolences in the interim, you can simply email &nbsp; <a href='mailto:rememberingsteve@apple.com' style={{color: "Purple"}}> rememberingsteve@apple.com</a><br/><br/></p>
                                 <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
                                 <Stack direction="row" spacing={1}>
                                 <Avatar sx={{ bgcolor: deepPurple[500], width: 32, height: 32, marginRight: 1 }}>T</Avatar>
@@ -70,7 +70,7 @@ export default function BlogCardDemo() {
                                     <div class="category"><a >Evolution</a><a >Productivity</a></div><a href="https://www.cnet.com/pictures/apple-products-of-the-tim-cook-era/">
                                         <h2 class="h4" style={{color: "Purple"}}>The evolution of Apple's products under Tim Cook </h2></a>
                                 </header>
-                                <p>Less than two months before succumbing to cancer, ailing Apple co-founder Steve Jobs resigned from the office of CEO on August 24, 2011. Tim Cook (left), who had been the company's chief operating officer since 2004, took over the top spot at the world's preeminent technology company.<br/><br/>
+                                <p>Less than two months before succumbing to cancer, ailing Apple co-founder Steve Jobs resigned from the office of CEO on August 24, 2011. Tim Cook (left), took over the top spot at the world's preeminent technology company.<br/><br/>
 
 
 </p>

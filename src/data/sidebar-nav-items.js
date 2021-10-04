@@ -1,4 +1,5 @@
 import React from "react";
+import PersonIcon from '@mui/icons-material/Person';
 export default function() {
   return [
     {
@@ -9,8 +10,8 @@ export default function() {
       htmlAfter: ""
     },
     {
-      title: "Blog Posts",
-      // htmlBefore: '<i class="material-icons">vertical_split</i>',
+      title: "  Blog Posts",
+      // htmlBefore: "<box-icon name='home' color='#800080' ></box-icon>",
       to: "/dashboard/blog-posts",
     },
     {
@@ -26,19 +27,11 @@ export default function() {
     {
       title: "Inbox",
       // htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/dashboard/components-overview",
+      to: "/dashboard/inbox",
     },
    
-    {
-      title: "Subscriber",
-      // htmlBefore: '<i class="material-icons">person</i>',
-      to: "/dashboard/user-profile-lite",
-    },
-    {
-      title: "Back to Home",
-      // htmlBefore: '<i class="material-icons">person</i>',
-      to: "/dashboard/user-profile-lite",
-    },
+  
+    
    
   ];
 }

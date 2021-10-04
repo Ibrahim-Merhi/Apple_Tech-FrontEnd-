@@ -15,6 +15,7 @@ import NavbarNav from '../components/layout/MainNavbar/NavbarNav/NavbarNav';
 import MainNavbar from '../components/layout/MainNavbar/MainNavbar';
 import MainSidebar from '../components/layout/MainSidebar/MainSidebar';
 import MainFooter from '../components/layout/MainFooter';
+import { color, style } from "@mui/system";
 
 
 const BlogOverview = ({ smallStats }) => (
@@ -29,7 +30,7 @@ const BlogOverview = ({ smallStats }) => (
     {/* Page Header */}
    
 
-    <Row noGutters className="page-header py-4" >
+    <Row noGutters className="page-header pt-0 toppadingtitle" >
       <PageTitle title="Blog Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
     </Row>
 
@@ -64,7 +65,7 @@ const BlogOverview = ({ smallStats }) => (
       </Col>
 
       {/* New Draft */}
-      <Col lg="6" md="8" sm="12" className="mb-4">
+      <Col lg="6" md="8" sm="12" className="mb-4 ">
         <NewDraft />
       </Col>
 
@@ -92,9 +93,10 @@ BlogOverview.defaultProps = {
   smallStats: [
     {
       label: "Posts",
-      value: "2,390",
+      value: "4",
       percentage: "4.7%",
       increase: true,
+      backgroundColor: "red",
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
       datasets: [
@@ -102,15 +104,15 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(0, 184, 216, 0.1)",
-          borderColor: "rgb(0, 184, 216)",
+          backgroundColor: "rgba(128,0,128, 0.1)",
+          borderColor: "rgb(128,0,128)",
           data: [1, 2, 1, 3, 5, 4, 7]
         }
       ]
     },
     {
-      label: "Pages",
-      value: "182",
+      label: "Blogs",
+      value: "5",
       percentage: "12.4",
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
@@ -120,15 +122,15 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(23,198,113,0.1)",
-          borderColor: "rgb(23,198,113)",
+          backgroundColor: "rgba(128,0,128,0.1)",
+          borderColor: "rgb(128,0,128)",
           data: [1, 2, 3, 3, 3, 4, 4]
         }
       ]
     },
     {
       label: "Comments",
-      value: "8,147",
+      value: "3",
       percentage: "3.8%",
       increase: false,
       decrease: true,
@@ -139,15 +141,15 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,180,0,0.1)",
-          borderColor: "rgb(255,180,0)",
+          backgroundColor: "rgba(255,0,255,0.1)",
+          borderColor: "rgb(255,0,255)",
           data: [2, 3, 3, 3, 4, 3, 3]
         }
       ]
     },
     {
-      label: "New Customers",
-      value: "29",
+      label: "New Questions",
+      value: "2",
       percentage: "2.71%",
       increase: false,
       decrease: true,
@@ -158,18 +160,18 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,65,105,0.1)",
-          borderColor: "rgb(255,65,105)",
+          backgroundColor: "rgba(255,0,255,0.1)",
+          borderColor: "rgb(255,0,255)",
           data: [1, 7, 1, 3, 1, 4, 8]
         }
       ]
     },
     {
       label: "Subscribers",
-      value: "17,281",
-      percentage: "2.4%",
-      increase: false,
-      decrease: true,
+      value: "4",
+      percentage: "8.4%",
+      increase: true,
+      decrease: false,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "4", sm: "6" },
       datasets: [
@@ -177,9 +179,9 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgb(0,123,255,0.1)",
-          borderColor: "rgb(0,123,255)",
-          data: [3, 2, 3, 2, 4, 5, 4]
+          backgroundColor: "rgb(128,0,128,0.1)",
+          borderColor: "rgb(128,0,128)",
+          data: [4, 2, 4, 2, 6, 5, 7]
         }
       ]
     }

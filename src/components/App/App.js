@@ -25,6 +25,8 @@ import AddNewPost from "../../views/AddNewPost";
 import BlogPosts from "../../views/BlogPosts";
 import QAList from '../../Pages/Q&A List/Q&A List'
 import NewQuestion from "../../Pages/NewBlog/NewQuestion";
+import Inbox from "../../views/Inbox";
+import CreateAdmin from '../../views/CreateAdmin'
 import 'boxicons';
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "../../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
@@ -153,9 +155,21 @@ class App extends Component {
 			/>
 			<Route
 				exact
+				path="/dashboard/createAdmin"
+				component={CreateAdmin}
+				
+			/>
+			<Route
+				exact
 				path="/dashboard/add-new-post"
 				layout= {DefaultLayout}
    				 component= {AddNewPost}
+			/>
+			<Route
+				exact
+				path="/dashboard/inbox"
+				layout= {DefaultLayout}
+   				 component= {Inbox}
 			/>
 			<Route
 				exact

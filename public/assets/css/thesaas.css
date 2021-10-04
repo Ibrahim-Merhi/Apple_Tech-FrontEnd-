@@ -2288,7 +2288,7 @@ button:focus {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.active {
-  color: #0facf3;
+  color: purple;
 }
 
 .nav-link.disabled {

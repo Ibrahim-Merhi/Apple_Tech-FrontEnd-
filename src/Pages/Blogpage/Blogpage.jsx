@@ -16,7 +16,8 @@ import Footer from '../../components/Footer/Footer'
 
 import Blogdetail from '../Blogdetails/Blogdetails'
 import './css/style.css'
-export default function SignInSide() {
+export default function SignInSide(props) {
+  let id= props.match.params.id
   const [blogs, setBlogs] = useState([]);
 
   async function fetchData() {
@@ -34,8 +35,71 @@ export default function SignInSide() {
       }
   }
 
+  const [news1, setNews1] = useState([]);
+
+  async function fetchNews1() {
+      try {
+          await API.get('blog/news1')
+              .then(res => {
+                  const data = res.data.result;
+                  const success = res.data.success;
+                  console.log("dd",data)
+                  if (success)
+                  setNews1(data);
+              });
+      } catch (e) {
+          console.log("ERROR", e);
+      }
+  }
+
+  const [news0, setNews0] = useState([]);
+
+  async function fetchNews0() {
+      try {
+          await API.get('blog/news0')
+              .then(res => {
+                  const data = res.data.result;
+                  const success = res.data.success;
+                  console.log("dd",data)
+                  if (success)
+                  setNews0(data);
+              });
+      } catch (e) {
+          console.log("ERROR", e);
+      }
+  }
+
+
+
+  const [comments, setComments] = useState([]);
+  const [totaclComments, setTotaclComments] = useState(0);
+
+    async function fetchComment() {
+    
+        try {
+            await API.get(`comment`)
+                .then(res => {
+                    const data = res.data.result;
+                    const success = res.data.success;
+                    console.log("dd",data)
+                    if (success)
+                    setComments(data);
+                    setTotaclComments(data.length);
+                    
+                });
+        } catch (e) {
+            console.log("ERROR", e);
+        }
+    }
   useEffect(() => {
       fetchData();
+      fetchNews0()
+      fetchNews1()
+      fetchComment();
+      window.scroll({
+        top: 0,
+        left: 0,
+      });
   }, [])
 
   return (
@@ -59,33 +123,38 @@ export default function SignInSide() {
                    <div class="post-thumbnail">
                      
                    </div>
-              <div class="post-details">
+                   <div id="zoom">
+              <div class="post-details"  id="hover-underline-animation" style={{backgroundColor: "white"}}>
                 <Link to={`/blogPage/blogDetail/${blog.id}`}>
-                  <img src={img1} alt="..." class="img-fluid" />
-                </Link>
-                <div class="post-meta d-flex justify-content-between">
-                  <div class="date meta-last">20 May | 2016</div>
-                  <div class="category">
-                    <a href="#">Business</a>
+                  {/* <img src={img1} alt="..." class="img-fluid" /> */}
+                  <img src={blog.image} alt="..." class="img-fluid" style={{height: "426px" , width: "640px"}} ></img>
+                
+                <div class="post-meta d-flex justify-content-between pl-2">
+                <div class="category" style={{color: "purple"}}>
+                    <a >{blog.categories}</a>
                   </div>
+                  
+                  
                 </div>
                 <a href="post.html">
-                  <h3 class="h4" style={{textTransform: "uppercase"}}>
+                  <h3 class="h4 pl-2" style={{textTransform: "uppercase"}}>
                     {blog.title}
                   </h3>
                 </a>
-                <p class="text-muted">
+                <p class="text-muted pl-2">
                 {blog.description}
                 </p>
-                <footer class="post-footer d-flex align-items-center">
+                <footer class="post-footer d-flex align-items-center pl-2">
                
                   <div class="date">
-                    <i class="icon-clock"></i> {blog.date}
+                    <i class="icon-clock"></i> {blog.date.substring(0, blog.date.indexOf('T'))}
                   </div>
                   <div class="comments meta-last">
-                    <i class="icon-comment"></i>12
+                    <i class="icon-comment"></i>{totaclComments}
                   </div>
                 </footer>
+                </Link>
+              </div>
               </div>
               
             </div>
@@ -196,7 +265,7 @@ export default function SignInSide() {
       </div>
       <div>
       <aside id="asidetest">
-        <div class="widget search">
+        <div class="widget search"  style={{backgroundColor: "white"}}>
           <header>
             <h3 class="h6">Search the blog</h3>
           </header>
@@ -204,39 +273,42 @@ export default function SignInSide() {
             <div class="form-group">
               <input type="search" placeholder="What are you looking for?" />
               <button type="submit" class="submit">
-                <i class="icon-search"></i>
+                <i class="icon-search" style={{color: "purple"}}></i>
               </button>
             </div>
           </form>
         </div>
 
-        <div class="widget latest-posts">
+        <div class="widget latest-posts"  style={{backgroundColor: "white"}}>
           <header>
-            <h3 class="h6">Latest Posts</h3>
+            <h3 class="h6">Latest News</h3>
           </header>
+          {news1.map(news => (
           <div class="blog-posts">
+            <Link to={`/blogPage/blogDetail/${news.id}`}>
             <a href="#">
-              <div class="item d-flex align-items-center">
+              <div class="item d-flex align-items-center"  id="zoom" style={{color: "purple"}}>
                 <div class="image">
                   <img
-                    src={img1}
+                   src={news.image}
                     alt="..."
                     class="img-fluid"
                   />
                 </div>
                 <div class="title">
-                  <strong>Alberto Savoia Can Teach You About</strong>
+                  <strong>{news.title}</strong>
                   <div class="d-flex align-items-center">
                     <div class="views">
-                      <i class="icon-eye"></i> 500
+                    <i class="icon-clock"></i> {news.date.substring(0, news.date.indexOf('T'))}
                     </div>
                     <div class="comments">
-                      <i class="icon-comment"></i>12
+                      <i class="icon-comment"></i>{totaclComments}
                     </div>
                   </div>
                 </div>
               </div>
             </a>
+            </Link>
             {/* <a href="#">
               <div class="item d-flex align-items-center">
                 <div class="image">
@@ -282,31 +354,32 @@ export default function SignInSide() {
               </div>
             </a> */}
           </div>
+          ))}
         </div>
 
-        <div class="widget categories">
+        <div class="widget categories"  style={{backgroundColor: "white"}}>
           <header>
             <h3 class="h6">Categories</h3>
           </header>
           <div class="item d-flex justify-content-between">
             <a href="#">News</a>
-            <span>25</span>
+            <span>1</span>
           </div>
           <div class="item d-flex justify-content-between">
             <a href="#">Trickes</a>
-            <span>12</span>
+            <span>1</span>
           </div>
           <div class="item d-flex justify-content-between">
             <a href="#">Tips</a>
-            <span>17</span>
+            <span>0</span>
           </div>
           <div class="item d-flex justify-content-between">
             <a href="#">Hackes</a>
-            <span>8</span>
+            <span>0</span>
           </div>
           <div class="item d-flex justify-content-between">
             <a href="#">Common Problem</a>
-            <span>25</span>
+            <span>1</span>
           </div>
           
           
@@ -317,6 +390,21 @@ export default function SignInSide() {
       </aside>
       </div>
       </div>
+      <div class="demo" style={{backgroundColor: "transparent", marginLeft: "35%"}}>
+    <nav class="pagination-outer" aria-label="Page navigation" >
+        <ul class="pagination">
+            
+           
+            <li class="page-item"><a class="page-link" href="#"><h4 style={{color: "white"}}>«</h4></a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#"><h4 style={{color: "white"}}>»</h4></a></li>
+        </ul>
+    </nav>
+</div>
       <Footer />
     </div>
   );

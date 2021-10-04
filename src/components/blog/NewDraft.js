@@ -32,9 +32,9 @@ const NewDraft = ({ title }) => (
 
         {/* Create Draft */}
         <FormGroup className="mb-0">
-          <Button theme="accent" type="submit">
+          <button theme="accent" type="submit">
             Create Draft
-          </Button>
+          </button>
         </FormGroup>
       </Form>
     </CardBody>

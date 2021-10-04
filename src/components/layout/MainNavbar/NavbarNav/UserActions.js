@@ -9,7 +9,9 @@ import {
   NavItem,
   NavLink
 } from "shards-react";
-
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
 export default class UserActions extends React.Component {
   constructor(props) {
     super(props);
@@ -30,14 +32,13 @@ export default class UserActions extends React.Component {
   render() {
     return (
       <NavItem  tag={Dropdown} caret toggle={this.toggleUserActions} >
-        <DropdownToggle caret tag={NavLink} className="text-nowrap " >
-          <img
-            className="user-avatar rounded-circle mr-2"
-            src={require("./../../../../images/avatars/0.jpg")}
-            alt="User Avatar"
-          />{" "}
-          <span className="d-none d-md-inline-block">Sierra Brooks</span>
-        </DropdownToggle>
+        {/* <DropdownToggle caret tag={NavLink} className="text-nowrap " > */}
+        <Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width: 32, height: 32, }}>I</Avatar>
+                                <span className="d-none d-md-inline-block mt-1">Ibrahim Merhi</span>
+                                </Stack>
+        
+        {/* </DropdownToggle> */}
         <Collapse tag={DropdownMenu} right small open={this.state.visible}>
           <DropdownItem tag={Link} to="user-profile">
             <i className="material-icons">&#xE7FD;</i> Profile

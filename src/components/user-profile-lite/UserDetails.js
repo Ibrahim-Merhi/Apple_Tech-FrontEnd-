@@ -1,75 +1,156 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {
-  Card,
-  CardHeader,
-  Button,
-  ListGroup,
-  ListGroupItem,
-  Progress
-} from "shards-react";
-
+import './style.css'
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
 const UserDetails = ({ userDetails }) => (
-  <Card small className="mb-4 pt-3">
-    <CardHeader className="border-bottom text-center">
-      <div className="mb-3 mx-auto">
-        <img
-          className="rounded-circle"
-          src={userDetails.avatar}
-          alt={userDetails.name}
-          width="110"
-        />
+  <div class="container">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="card user-card">
+              <div class="card-header">
+                  <h5>Profile</h5>
+              </div>
+              <div class="card-block">
+                  
+                  <Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width:100, height:100, fontSize: "500%", marginLeft: "30%" }}>I</Avatar>
+                                </Stack>
+                  
+                  <h6 class="f-w-600 m-t-25 m-b-10">Ibrahim Merhi</h6>
+                  <p class="text-muted">Active | Male | Born 1996 /10 /10</p>
+                  <hr/>
+                  <p class="text-muted m-t-15">Activity Level: 87%</p>
+                  <ul class="list-unstyled activity-leval">
+                      <li class="active"></li>
+                      <li class="active"></li>
+                      <li class="active"></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+                  <div class="bg-c-blue counter-block m-t-10 p-20">
+                      <div class="row">
+                          <div class="col-4">
+                              <i class="fa fa-comment"></i>
+                              <p>1256</p>
+                          </div>
+                          <div class="col-4">
+                              <i class="fa fa-user"></i>
+                              <p>8562</p>
+                          </div>
+                          <div class="col-4">
+                              <i class="fa fa-suitcase"></i>
+                              <p>189</p>
+                          </div>
+                      </div>
+                  </div>
+                  <p class="m-t-15 text-muted">Responsible of every blog post.</p>
+                  <hr/>
+                  <div class="row justify-content-center user-social-link">
+                      <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                      <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                      <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
+                  </div>
+              </div>
+          </div>
       </div>
-      <h4 className="mb-0">{userDetails.name}</h4>
-      <span className="text-muted d-block mb-2">{userDetails.jobTitle}</span>
-      <Button pill outline size="sm" className="mb-2">
-        <i className="material-icons mr-1">person_add</i> Follow
-      </Button>
-    </CardHeader>
-    <ListGroup flush>
-      <ListGroupItem className="px-4">
-        <div className="progress-wrapper">
-          <strong className="text-muted d-block mb-2">
-            {userDetails.performanceReportTitle}
-          </strong>
-          <Progress
-            className="progress-sm"
-            value={userDetails.performanceReportValue}
-          >
-            <span className="progress-value">
-              {userDetails.performanceReportValue}%
-            </span>
-          </Progress>
-        </div>
-      </ListGroupItem>
-      <ListGroupItem className="p-4">
-        <strong className="text-muted d-block mb-2">
-          {userDetails.metaTitle}
-        </strong>
-        <span>{userDetails.metaValue}</span>
-      </ListGroupItem>
-    </ListGroup>
-  </Card>
+      
+      <div class="col-md-4">
+          <div class="card user-card">
+              <div class="card-header">
+                  <h5>Profile</h5>
+              </div>
+              <div class="card-block">
+              <Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width:100, height:100, fontSize: "500%", marginLeft: "30%" }}>H</Avatar>
+                                </Stack>
+                  <h6 class="f-w-600 m-t-25 m-b-10">Hilal Masri</h6>
+                  <p class="text-muted">Active | Male | Born 2001 /05 /12</p>
+                  <hr/>
+                  <p class="text-muted m-t-15">Activity Level: 87%</p>
+                  <ul class="list-unstyled activity-leval">
+                      <li class="active"></li>
+                      <li class="active"></li>
+                      <li class="active"></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+                  <div class="bg-c-green counter-block m-t-10 p-20">
+                      <div class="row">
+                          <div class="col-4">
+                              <i class="fa fa-comment"></i>
+                              <p>1256</p>
+                          </div>
+                          <div class="col-4">
+                              <i class="fa fa-user"></i>
+                              <p>8562</p>
+                          </div>
+                          <div class="col-4">
+                              <i class="fa fa-suitcase"></i>
+                              <p>189</p>
+                          </div>
+                      </div>
+                  </div>
+                  <p class="m-t-15 text-muted">Responsible of every answer post.</p>
+                  <hr/>
+                  <div class="row justify-content-center user-social-link">
+                      <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                      <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                      <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="col-md-4">
+          <div class="card user-card">
+              <div class="card-header">
+                  <h5>Profile</h5>
+              </div>
+              <div class="card-block">
+              <Stack direction="row" spacing={1}>
+                                <Avatar sx={{ bgcolor: deepPurple[500], width:100, height:100, fontSize: "500%", marginLeft: "30%" }}>B</Avatar>
+                                </Stack>
+                  <h6 class="f-w-600 m-t-25 m-b-10">Baraa Haydar</h6>
+                  <p class="text-muted">Active | Male | Born 1997 /06 /20</p>
+                  <hr/>
+                  <p class="text-muted m-t-15">Activity Level: 87%</p>
+                  <ul class="list-unstyled activity-leval">
+                      <li class="active"></li>
+                      <li class="active"></li>
+                      <li class="active"></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+                  <div class="bg-c-yellow counter-block m-t-10 p-20">
+                      <div class="row">
+                          <div class="col-4">
+                              <i class="fa fa-comment"></i>
+                              <p>1256</p>
+                          </div>
+                          <div class="col-4">
+                              <i class="fa fa-user"></i>
+                              <p>8562</p>
+                          </div>
+                          <div class="col-4">
+                              <i class="fa fa-suitcase"></i>
+                              <p>189</p>
+                          </div>
+                      </div>
+                  </div>
+                  <p class="m-t-15 text-muted">Responsible of every comment post.</p>
+                  <hr/>
+                  <div class="row justify-content-center user-social-link">
+                      <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
+                      <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                      <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
+</div>
 );
 
-UserDetails.propTypes = {
-  /**
-   * The user details object.
-   */
-  userDetails: PropTypes.object
-};
-
-UserDetails.defaultProps = {
-  userDetails: {
-    name: "Sierra Brooks",
-    avatar: require("./../../images/avatars/0.jpg"),
-    jobTitle: "Project Manager",
-    performanceReportTitle: "Workload",
-    performanceReportValue: 74,
-    metaTitle: "Description",
-    metaValue:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae minima obcaecati quod dolorum sint alias, possimus illum assumenda eligendi cumque?"
-  }
-};
 
 export default UserDetails;

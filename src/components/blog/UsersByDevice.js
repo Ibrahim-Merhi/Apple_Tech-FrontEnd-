@@ -1,4 +1,5 @@
 import React from "react";
+import { MDBSelect } from "mdbreact";
 import PropTypes from "prop-types";
 import {
   Row,
@@ -9,7 +10,7 @@ import {
   CardBody,
   CardFooter
 } from "shards-react";
-
+import './style.css'
 import Chart from "../../utils/chart";
 
 class UsersByDevice extends React.Component {
@@ -47,6 +48,7 @@ class UsersByDevice extends React.Component {
   }
 
   render() {
+    
     const { title } = this.props;
     return (
       <Card small className="h-100" >
@@ -57,27 +59,29 @@ class UsersByDevice extends React.Component {
           <canvas
             height="220"
             ref={this.canvasRef}
-            className="blog-users-by-device m-auto"
+            className="blog-users-by-device m-auto "
           />
         </CardBody>
         <CardFooter className="border-top">
           <Row>
-            <Col>
+            <Col >
               <FormSelect
                 size="sm"
                 value="last-week"
-                style={{ maxWidth: "130px" }}
+                style={{ maxWidth: "130px",  }}
                 onChange={() => {}}
               >
-                <option value="last-week">Last Week</option>
+               
+                <option value="last-week" >Last Week</option>
                 <option value="today">Today</option>
                 <option value="last-month">Last Month</option>
                 <option value="last-year">Last Year</option>
+                
               </FormSelect>
             </Col>
             <Col className="text-right view-report">
               {/* eslint-disable-next-line */}
-              <a href="#">View full report &rarr;</a>
+              <a href="#" style={{color: "purple"}}>View full report &rarr;</a>
             </Col>
           </Row>
         </CardFooter>
@@ -113,9 +117,9 @@ UsersByDevice.defaultProps = {
         hoverBorderColor: "#ffffff",
         data: [68.3, 24.2, 7.5],
         backgroundColor: [
-          "rgba(0,123,255,0.9)",
-          "rgba(0,123,255,0.5)",
-          "rgba(0,123,255,0.3)"
+          "rgba(128,0,128,0.9)",
+          "rgba(128,0,128,0.5)",
+          "rgba(128,0,128,0.3)"
         ]
       }
     ],

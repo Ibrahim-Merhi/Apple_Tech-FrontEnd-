@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
  import './style.css'
  import img1 from './assets/images/about-us.jpg'
 import img2 from './assets/images/team-member.jpg'
+import img3 from './assets/images/team-member2.jpg'
 import Footer from '../../components/Footer/Footer'
 export default function Contact() {
   return (
@@ -13,8 +14,8 @@ export default function Contact() {
       <Navbar />
       <Banner
         backgroundImage="url(assets/img/bg-gift5.jpg)"
-        title="Latest Blog Posts"
-        paragraph="Read and get updated on how we progress."
+        title="ABOUT US"
+        paragraph="Summary About Us And Our Team"
       />
 
       {/* <div id="mu-page-header">
@@ -40,9 +41,7 @@ export default function Contact() {
                       <div class="mu-title">
                         <h2>Who we are</h2>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit. Aenean commodo ligula eget dolor. Aenean massa
-                          cum sociis.
+                          we are group of programers and talented people wich we belive in apple company and wants to be a part of them.
                         </p>
                       </div>
                     </div>
@@ -64,31 +63,19 @@ export default function Contact() {
                           <li>
                             <h3>Our Mission</h3>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetuer
-                              adipiscing elit. Aenean commodo ligula eget dolor.
-                              Aenean massa. Cum sociis natoque penatibus et
-                              magnis dis parturient montes, nascetur ridiculus
-                              mus. Donec quam felis,
+                              Helps peoplein their problem even teach them new technique and new way to solve their problems
                             </p>
                           </li>
                           <li>
                             <h3>Our Vision</h3>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetuer
-                              adipiscing elit. Aenean commodo ligula eget dolor.
-                              Aenean massa. Cum sociis natoque penatibus et
-                              magnis dis parturient montes, nascetur ridiculus
-                              mus. Donec quam felis,
+                             Be one of the best teams that help people and understand well apple concepts
                             </p>
                           </li>
                           <li>
                             <h3>Our Valuse</h3>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetuer
-                              adipiscing elit. Aenean commodo ligula eget dolor.
-                              Aenean massa. Cum sociis natoque penatibus et
-                              magnis dis parturient montes, nascetur ridiculus
-                              mus. Donec quam felis,
+                              Be Honest ... Be Friendly ... Be Apple user
                             </p>
                           </li>
                         </ul>
@@ -111,15 +98,13 @@ export default function Contact() {
                       <div class="mu-title">
                         <h2>Our Working Skill</h2>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit. Aenean commodo ligula eget dolor. Aenean massa
-                          cum sociis.
+                          You can check our skils levels
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div class="row">
+                  <div class="row" >
                     <div class="col-md-12">
                       <div class="mu-skills-content">
                         <div class="row">
@@ -144,8 +129,8 @@ export default function Contact() {
                                   </div>
                                 </div>
                               </div>
-                              <h3>Web Design</h3>
-                              <p>
+                              <h3 style={{color: "white"}}>Web Design</h3>
+                              <p style={{color: "white"}}>
                                 Lorem ipsum dolor sit amet, con sectetuer
                                 adipiscing elitamin.
                               </p>
@@ -170,34 +155,8 @@ export default function Contact() {
                                   </div>
                                 </div>
                               </div>
-                              <h3>Mobile Development</h3>
-                              <p>
-                                Lorem ipsum dolor sit amet, con sectetuer
-                                adipiscing elitamin.
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="col-md-3">
-                            <div class="mu-single-skills">
-                              <div class="row d-flex justify-content-center mt-50">
-                                <div class="col-md-6">
-                                  <div class="progress blue" style={{background: "Transparent", boxShadow: "none"}}>
-                                    {" "}
-                                    <span class="progress-left">
-                                      {" "}
-                                      <span class="progress-bar"></span>{" "}
-                                    </span>{" "}
-                                    <span class="progress-right">
-                                      {" "}
-                                      <span class="progress-bar"></span>{" "}
-                                    </span>
-                                    <div class="progress-value">70%</div>
-                                  </div>
-                                </div>
-                              </div>
-                              <h3>E-commerce</h3>
-                              <p>
+                              <h3 style={{color: "white"}}>Mobile Development</h3>
+                              <p style={{color: "white"}}>
                                 Lorem ipsum dolor sit amet, con sectetuer
                                 adipiscing elitamin.
                               </p>
@@ -222,8 +181,34 @@ export default function Contact() {
                                   </div>
                                 </div>
                               </div>
-                              <h3>Online Marketing</h3>
-                              <p>
+                              <h3 style={{color: "white"}}>E-commerce</h3>
+                              <p style={{color: "white"}}>
+                                Lorem ipsum dolor sit amet, con sectetuer
+                                adipiscing elitamin.
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="col-md-3">
+                            <div class="mu-single-skills">
+                              <div class="row d-flex justify-content-center mt-50">
+                                <div class="col-md-6">
+                                  <div class="progress blue" style={{background: "Transparent", boxShadow: "none"}}>
+                                    {" "}
+                                    <span class="progress-left">
+                                      {" "}
+                                      <span class="progress-bar"></span>{" "}
+                                    </span>{" "}
+                                    <span class="progress-right">
+                                      {" "}
+                                      <span class="progress-bar"></span>{" "}
+                                    </span>
+                                    <div class="progress-value">70%</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <h3 style={{color: "white"}}>Online Marketing</h3>
+                              <p style={{color: "white"}}>
                                 Lorem ipsum dolor sit amet, con sectetuer
                                 adipiscing elitamin.
                               </p>
@@ -249,9 +234,7 @@ export default function Contact() {
                       <div class="mu-title">
                         <h2>Creative team</h2>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit. Aenean commodo ligula eget dolor. Aenean massa
-                          cum sociis.
+                          Check our amazing team members who are experts in their domain.
                         </p>
                       </div>
                     </div>
@@ -265,40 +248,18 @@ export default function Contact() {
                             <div class="mu-single-team">
                               <div class="mu-single-team-img">
                                 <img
-                                  src={img2}
+                                  src={img3}
                                   alt="img"
                                 />
                               </div>
                               <div class="mu-single-team-content">
-                                <h3>Hannah Torres</h3>
-                                <span>Founder</span>
+                                <h3>Hilal Masri</h3>
+                                <span>Programer</span>
                                 <p>
-                                  Lorem ipsum dolor sit amet, consectetuer
-                                  adipiscing elit. Aenean commodo ligula eget
-                                  dolor.
+                                Swift Programer and application Builder
                                 </p>
-                                <ul class="mu-team-social">
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-facebook"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-twitter"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-pinterest-p"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-google-plus"></i>
-                                    </a>
-                                  </li>
-                                </ul>
+                                
+                              
                               </div>
                             </div>
                           </div>
@@ -307,40 +268,18 @@ export default function Contact() {
                             <div class="mu-single-team">
                               <div class="mu-single-team-img">
                               <img
-                                  src={img2}
+                                  src={img3}
                                   alt="img"
                                 />
                               </div>
                               <div class="mu-single-team-content">
-                                <h3>Hannah Torres</h3>
-                                <span>Founder</span>
+                                <h3>Bashir Khoder</h3>
+                                <span>Web Designer</span>
                                 <p>
-                                  Lorem ipsum dolor sit amet, consectetuer
-                                  adipiscing elit. Aenean commodo ligula eget
-                                  dolor.
+                                  Front and Back End Designer
+                                  
                                 </p>
-                                <ul class="mu-team-social">
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-facebook"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-twitter"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-pinterest-p"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-google-plus"></i>
-                                    </a>
-                                  </li>
-                                </ul>
+                               
                               </div>
                             </div>
                           </div>
@@ -349,40 +288,17 @@ export default function Contact() {
                             <div class="mu-single-team">
                               <div class="mu-single-team-img">
                               <img
-                                  src={img2}
+                                  src={img3}
                                   alt="img"
                                 />
                               </div>
                               <div class="mu-single-team-content">
-                                <h3>Hannah Torres</h3>
-                                <span>Founder</span>
+                                <h3>Baraa Haydar</h3>
+                                <span>Tester</span>
                                 <p>
-                                  Lorem ipsum dolor sit amet, consectetuer
-                                  adipiscing elit. Aenean commodo ligula eget
-                                  dolor.
+                                  Test application and websites
                                 </p>
-                                <ul class="mu-team-social">
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-facebook"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-twitter"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-pinterest-p"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-google-plus"></i>
-                                    </a>
-                                  </li>
-                                </ul>
+                               
                               </div>
                             </div>
                           </div>
@@ -391,40 +307,17 @@ export default function Contact() {
                             <div class="mu-single-team">
                               <div class="mu-single-team-img">
                               <img
-                                  src={img2}
+                                  src={img3}
                                   alt="img"
                                 />
                               </div>
                               <div class="mu-single-team-content">
-                                <h3>Hannah Torres</h3>
-                                <span>Founder</span>
+                                <h3>Ahmad Hamdach</h3>
+                                <span>Problem Solver</span>
                                 <p>
-                                  Lorem ipsum dolor sit amet, consectetuer
-                                  adipiscing elit. Aenean commodo ligula eget
-                                  dolor.
+                                  Solve Hardware and Software Problem
                                 </p>
-                                <ul class="mu-team-social">
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-facebook"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-twitter"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-pinterest-p"></i>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                      <i class="fa fa-google-plus"></i>
-                                    </a>
-                                  </li>
-                                </ul>
+                               
                               </div>
                             </div>
                           </div>

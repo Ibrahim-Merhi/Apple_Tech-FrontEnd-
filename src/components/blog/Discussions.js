@@ -70,7 +70,7 @@ const Discussions = ({ title, discussions }) => (
       <Row>
         <Col className="text-center view-report">
           <Button theme="white" type="submit">
-            View All Comments
+            View All Answers
           </Button>
         </Col>
       </Row>
@@ -90,7 +90,7 @@ Discussions.propTypes = {
 };
 
 Discussions.defaultProps = {
-  title: "Discussions",
+  title: "Answers",
   discussions: [
     {
       id: 1,
